@@ -1,0 +1,17 @@
+{
+  "builds": [
+    {
+      "src": "chatbot_project/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "chatbot_project/wsgi.py"
+    }
+  ]
+}
